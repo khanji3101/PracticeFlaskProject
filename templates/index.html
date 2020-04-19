@@ -25,5 +25,31 @@
     <script src="/static/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/static/js/bootstrap.min.js"></script>
+
+    {% extends "layout.html" %}
+    {% block content %}
+      <!-- Form
+      ================================================== -->
+    <div clas="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead">
+                        {% id name %}
+                            こんにちは {{name}} さん
+                        {% else %}
+                            {{ message }}
+                        {% endif %}
+                    </p>
+                    <form action= "/post" method="post" class="form-inline">
+                        <label for="name">名前</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                        <button type="submit" class="btn btn-default">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
   </body>
 </html>
