@@ -15,7 +15,7 @@ def picked_up():
 
 @app.route('/')
 def index():
-    title   = 'ようこそ'
+    title   = 'ようこそ！'
     message = picked_up()
     return render_template('index.html', message=message, title=title)
 
