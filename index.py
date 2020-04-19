@@ -9,7 +9,7 @@ def picked_up():
     messages = [
         'こんにちは、あなたの名前はなんですか？',
         'やあ！お名前はなんですか？',
-        'あなたの名前を教えてね？'
+        'あなたの名前を教えてね？？'
     ]
     return np.random.choice(messages)
 
